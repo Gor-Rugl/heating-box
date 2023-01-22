@@ -11,7 +11,7 @@ boolean vk=0;
 
 
 
-GyverNTC therm(A5, 10000, 3950);
+GyverNTC therm(A5, 10000, 3950);// Подключение термометра
 void setup() {
 
    Serial.begin(9600);
