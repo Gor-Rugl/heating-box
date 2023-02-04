@@ -27,6 +27,18 @@ pinMode(uprav,OUTPUT);
 digitalWrite(uprav,1);
 softSerial.readString();
  while(!softSerial.available()){delay(200);}
+ if(softSerial.available()){
+  b=softSerial.parseInt();
+if(b==255){
+softSerial.print("pov off");
+delay(2000);
+digitalWrite(pover,0);
+digitalWrite(po_pit,0);
+digitalWrite(nag,0);
+digitalWrite(uprav,0);
+
+while(true);
+}}
 digitalWrite(po_pit, 1);
 digitalWrite(pover,1);
 
